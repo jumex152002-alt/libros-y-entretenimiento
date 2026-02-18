@@ -1,0 +1,185 @@
+Quiero que generes una aplicación web moderna, emocional y minimalista llamada:
+
+“Mi Diario de Historias”
+
+OBJETIVO:
+Crear una plataforma superior a Goodreads para gestionar libros (principal enfoque), con funciones inteligentes de búsqueda avanzada, descubrimiento y asistencia conversacional.
+
+Debe sentirse cálida, visual y extremadamente fácil para una persona adulta no experta en tecnología.
+
+━━━━━━━━━━━━━━━━━━━━
+📚 INTEGRACIÓN CON OPEN LIBRARY (TIEMPO REAL)
+━━━━━━━━━━━━━━━━━━━━
+
+Integrar API gratuita de Open Library:
+
+https://openlibrary.org/search.json?q=
+
+Requisitos:
+
+1. Búsqueda dinámica con autocompletado:
+   - Activarse desde 2 letras
+   - Debounce inteligente
+   - Mostrar portada, título y autor en dropdown
+   - Navegación con teclado
+
+2. Al seleccionar libro:
+   - Guardar ID o ISBN
+   - Traer automáticamente:
+       - Portada
+       - Autor
+       - Año
+       - Descripción
+       - Género si existe
+   - Permitir edición manual si falta información
+
+3. No guardar catálogo completo.
+   Solo guardar referencias necesarias.
+
+━━━━━━━━━━━━━━━━━━━━
+🤖 CHATBOT ASISTENTE DE MEMORIA
+━━━━━━━━━━━━━━━━━━━━
+
+Agregar un chatbot inteligente integrado en la interfaz con botón flotante.
+
+Objetivo:
+Ayudar a encontrar libros cuando el usuario no recuerda el título exacto.
+
+Debe poder entender entradas como:
+
+- “Era un libro azul con una niña y un perro”
+- “Es una historia donde un niño va a una escuela de magia”
+- “Recuerdo que hablaba de la Segunda Guerra Mundial”
+- “Un libro donde el personaje se llama Anna”
+- “Tiene un tren en la portada”
+
+FUNCIONAMIENTO:
+
+1. El chatbot debe:
+   - Analizar palabras clave
+   - Extraer posibles títulos, personajes o temas
+   - Hacer búsqueda en Open Library
+   - Mostrar resultados con portadas
+   - Preguntar preguntas aclaratorias si hay muchas coincidencias
+
+2. Integrar lógica conversacional:
+   - Si no encuentra resultados, sugerir reformular
+   - Permitir seleccionar una opción sugerida
+   - Permitir buscar por fragmentos de frase
+
+3. UX:
+   - Interfaz tipo burbuja amigable
+   - Lenguaje cálido
+   - Respuestas claras y simples
+   - No técnico
+
+4. Arquitectura:
+   - Usar búsqueda flexible en Open Library
+   - Permitir búsqueda por:
+       - Título
+       - Autor
+       - Temas
+       - ISBN
+   - Preparar estructura para futura integración con modelo de IA real
+
+━━━━━━━━━━━━━━━━━━━━
+📷 RECONOCIMIENTO DE LIBRO POR FOTO
+━━━━━━━━━━━━━━━━━━━━
+
+Agregar opción para:
+
+1. Subir foto de portada
+2. Usar OCR (Tesseract.js)
+3. Detectar:
+   - Título
+   - Autor
+   - ISBN si aparece
+4. Buscar automáticamente en Open Library
+5. Mostrar coincidencias
+
+También permitir:
+- Escaneo manual de ISBN
+- Ingreso manual de ISBN
+
+━━━━━━━━━━━━━━━━━━━━
+📈 DESCUBRIMIENTO INTELIGENTE
+━━━━━━━━━━━━━━━━━━━━
+
+1. Sección “Descubre”
+   - Basado en géneros más usados
+   - Basado en calificaciones altas
+   - Mostrar libros similares
+
+2. Sección “Populares ahora”
+   - Lista simulada de tendencias
+   - Clásicos recomendados
+
+3. Recomendaciones personalizadas:
+   - Analizar historial
+   - Detectar patrón de gustos
+   - Mostrar sugerencias automáticas
+
+━━━━━━━━━━━━━━━━━━━━
+📊 EXPERIENCIA PERSONAL
+━━━━━━━━━━━━━━━━━━━━
+
+Cada libro debe permitir:
+
+- Estado:
+    - Pendiente
+    - En progreso
+    - Terminado
+- Calificación 1–5 estrellas
+- Progreso de lectura (páginas)
+- Fecha inicio / fin
+- Campo emocional:
+    - “¿Qué sentiste al terminarlo?”
+- Frases favoritas
+
+━━━━━━━━━━━━━━━━━━━━
+📊 ESTADÍSTICAS VISUALES
+━━━━━━━━━━━━━━━━━━━━
+
+Crear sección tipo “Mi Año en Historias”:
+
+- Total leídos
+- Género favorito
+- Autor más leído
+- Promedio de calificación
+- Mes más productivo
+
+Diseño tipo Spotify Wrapped.
+
+━━━━━━━━━━━━━━━━━━━━
+🎨 DISEÑO
+━━━━━━━━━━━━━━━━━━━━
+
+- React + Tailwind
+- Diseño minimalista y acogedor
+- Tarjetas grandes tipo Netflix
+- Vista grid y lista
+- Animaciones suaves
+- Botones grandes
+- Tipografía clara
+- Responsive
+- Modo claro y oscuro
+
+Prioridad absoluta en UX simple y emocional.
+
+━━━━━━━━━━━━━━━━━━━━
+💾 PERSISTENCIA
+━━━━━━━━━━━━━━━━━━━━
+
+- Guardar datos del usuario en LocalStorage o base ligera
+- No guardar base completa de Open Library
+- Guardar solo referencias (ID, ISBN)
+
+━━━━━━━━━━━━━━━━━━━━
+📦 ENTREGABLE
+━━━━━━━━━━━━━━━━━━━━
+
+Generar proyecto completo listo para ejecutar.
+Código organizado.
+Componentes separados.
+Arquitectura clara y escalable.
+Preparado para futura expansión a SaaS.
